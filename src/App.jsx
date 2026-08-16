@@ -4,7 +4,7 @@ import "./App.css"
 
 function App(){
     return(
-        <div>
+        <div style={{background:"transparent"}}>
             <MyPet/>
         </div>
     )

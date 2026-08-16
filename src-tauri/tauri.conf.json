@@ -10,12 +10,13 @@
     "beforeBuildCommand": "npm run build"
   },
   "app": {
+    "macOSPrivateApi":true,
    "windows": [
   {
     "label": "main",
     "title": "mypet",
-    "width": 200,
-    "height": 200,
+    "width": 124,
+    "height": 124,
     "transparent": true,
     "decorations": false,
     "alwaysOnTop": true,
