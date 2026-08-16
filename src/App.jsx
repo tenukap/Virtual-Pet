@@ -4,7 +4,8 @@ import "./App.css"
 
 function App(){
     return(
-        <div style={{background:"transparent"}}>
+        <div data-tauri-drag-region style={{background:"transparent",width:"100vw",
+    height:"100vh",}}>
             <MyPet/>
         </div>
     )

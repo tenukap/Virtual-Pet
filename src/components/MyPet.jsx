@@ -18,7 +18,7 @@ export default function AutoImageSwitcher(){
 
     return(
         <div style={{background:"transparent"}}>
-            <img src={images[currentIndex]} alt="Robot Eye movement"/>
+            <img src={images[currentIndex]} alt="Robot Eye movement" draggable="false"/>
         </div>
     )
 }
