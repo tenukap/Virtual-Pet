@@ -18,7 +18,6 @@ export default function AutoImageSwitcher(){
         const interval = setInterval(()=>{
             //cycle throught boot images 
             setCurrentIndex((prev)=>(prev === onboot_images.length -1 ? 0: prev+1));
-           
             sleepIndexset.current += 1;
             //check if sleep index is met requirment
             if(sleepIndexset.current > 4){
@@ -32,8 +31,8 @@ export default function AutoImageSwitcher(){
 
     return(
         <div style={{background:"transparent"}}>
-            {mode == "onboot" && <img src={onboot_images[currentIndex]} alt="Robot Eye movement" draggable="false"/>}
-           {mode == "sleeping" && <img src={sleepingframes[sleepindex]} alt="Robot sleeping movement" draggable="false"/>}
+            {mode == "onboot" && <img src={onboot_images[currentIndex]} alt="Robot Eye movement" draggable="false" />}
+           {mode == "sleeping" && <img src={sleepingframes[sleepindex]} alt="Robot sleeping movement" draggable="false" onMouseEnter={()=> {sleepIndexset.current = 0 ;setMode("onboot"); setCurrentIndex(0)}}/>}
         </div>
     )
 }
